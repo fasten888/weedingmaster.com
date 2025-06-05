@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weeding Master - Epic Grass Mowing Adventure</title>
+    <meta name="description" content="Experience the thrill of strategic grass mowing in Weeding Master. Master your mowing skills, overcome challenges, and become the ultimate weeding champion!">
+    <link rel="canonical" href="https://weeding-master-website.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            red: '#FF3B30',
+                            green: '#34C759',
+                            purple: '#AF52DE',
+                            yellow: '#FFCC00',
+                            orange: '#FF9500',
+                            dark: '#1C1C1E',
+                            gray: '#8E8E93',
+                            lightgray: '#F2F2F7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        @media (max-width: 640px) {
+            .game-container {
+                height: 70vh;
+            }
+        }
+    </style>
+</head>
+<body class="bg-apple-lightgray text-apple-dark">
+    <header class="bg-apple-blue text-white p-4 md:p-6 shadow-md">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl font-bold">Weeding Master</h1>
+                    <p class="text-lg mt-2">Become the ultimate weeding champion in this epic adventure!</p>
+                </div>
+                <nav>
+                    <ul class="flex space-x-4">
+                        <li><a href="#game" class="hover:text-apple-yellow transition-colors">Play Now</a></li>
+                        <li><a href="#about" class="hover:text-apple-yellow transition-colors">About</a></li>
+                        <li><a href="#features" class="hover:text-apple-yellow transition-colors">Features</a></li>
+                        <li><a href="#controls" class="hover:text-apple-yellow transition-colors">Controls</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-6">
+        <section id="game" class="my-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-apple-blue">Play Weeding Master</h2>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="game-container w-full h-screen max-h-[600px]">
+                    <iframe 
+                        src="https://www.crazygames.com/embed/stone-grass-mowing-simulator" 
+                        class="w-full h-full border-0"
+                        allow="gamepad *;"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="my-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-apple-blue">About Weeding Master</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="mb-4">Weeding Master is an engaging lawn maintenance simulation that transforms everyday yard work into an exciting challenge. Take control of professional gardening equipment and showcase your landscaping expertise.</p>
+                <p>With each level bringing new challenges and objectives, you'll need to master both precision control and tactical planning to become the ultimate Weeding Master.</p>
+            </div>
+        </section>
+
+        <section id="features" class="my-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-blue">Game Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-apple-orange mb-3">Professional Tools</h3>
+                    <p>Access a variety of professional-grade landscaping tools and equipment.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-apple-green mb-3">Diverse Environments</h3>
+                    <p>Work in various garden types, from small yards to extensive landscapes.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-apple-purple mb-3">Skill Progression</h3>
+                    <p>Unlock new abilities and tools as you improve your gardening expertise.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-apple-red mb-3">Challenge Mode</h3>
+                    <p>Test your skills in time-limited challenges and special missions.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-apple-yellow mb-3">Weather System</h3>
+                    <p>Adapt to different weather conditions that affect gameplay mechanics.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-apple-blue mb-3">Achievement System</h3>
+                    <p>Earn badges and rewards for mastering different gardening techniques.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="controls" class="my-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-apple-blue">Game Controls</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-xl font-semibold text-apple-purple mb-3">Keyboard Controls</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><span class="font-semibold">WASD or Arrow Keys:</span> Movement control</li>
+                            <li><span class="font-semibold">Space:</span> Activate equipment</li>
+                            <li><span class="font-semibold">E:</span> Switch tools</li>
+                            <li><span class="font-semibold">Esc:</span> Pause menu</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-apple-orange mb-3">Pro Tips</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Plan your mowing patterns for efficiency</li>
+                            <li>Keep an eye on your equipment condition</li>
+                            <li>Use the right tool for each task</li>
+                            <li>Complete bonus objectives for extra rewards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-apple-dark text-white p-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2024 Weeding Master. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-apple-blue transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-apple-blue transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-apple-blue transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JSON-LD structured data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Weeding Master",
+        "description": "Experience the thrill of professional landscaping in Weeding Master. Master your gardening skills, overcome challenges, and become the ultimate weeding champion!",
+        "genre": ["Simulation", "Strategy", "Action"],
+        "playMode": "SinglePlayer",
+        "applicationCategory": "Game",
+        "url": "https://weeding-master-website.com",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+</body>
+</html>
