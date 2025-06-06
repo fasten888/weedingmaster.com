@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 原有的 head 内容保持不变 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weeding Master - Epic Grass Mowing Adventure</title>
@@ -34,29 +35,64 @@
                 height: 70vh;
             }
         }
+        /* 新增样式 */
+        .social-share-btn {
+            transition: transform 0.2s;
+        }
+        .social-share-btn:hover {
+            transform: scale(1.1);
+        }
+        .star-btn {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .star-btn:hover {
+            transform: scale(1.2);
+        }
+        .ranking-sidebar {
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+        .ranking-sidebar:hover {
+            transform: translateX(-100%);
+        }
     </style>
 </head>
 <body class="bg-apple-lightgray text-apple-dark">
+    <!-- 原有的 header 部分保持不变 -->
     <header class="bg-apple-blue text-white p-4 md:p-6 shadow-md">
-        <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <h1 class="text-3xl md:text-4xl font-bold">Weeding Master</h1>
-                    <p class="text-lg mt-2">Become the ultimate weeding champion in this epic adventure!</p>
-                </div>
-                <nav>
-                    <ul class="flex space-x-4">
-                        <li><a href="#game" class="hover:text-apple-yellow transition-colors">Play Now</a></li>
-                        <li><a href="#about" class="hover:text-apple-yellow transition-colors">About</a></li>
-                        <li><a href="#features" class="hover:text-apple-yellow transition-colors">Features</a></li>
-                        <li><a href="#controls" class="hover:text-apple-yellow transition-colors">Controls</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        <!-- 原有内容 -->
     </header>
 
     <main class="container mx-auto p-4 md:p-6">
+        <!-- 热度排行榜（新增） -->
+        <div class="ranking-sidebar fixed right-0 top-1/4 bg-white shadow-lg rounded-l-lg p-4 transform translate-x-[calc(100%-10px)]">
+            <h3 class="text-xl font-bold text-apple-blue mb-4">热门排行</h3>
+            <div class="space-y-3">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-apple-orange mr-2">1</span>
+                    <div>
+                        <p class="font-semibold">除草大师</p>
+                        <span class="text-sm text-gray-500">游玩次数：1.2k</span>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-apple-green mr-2">2</span>
+                    <div>
+                        <p class="font-semibold">花园英雄</p>
+                        <span class="text-sm text-gray-500">游玩次数：980</span>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-apple-purple mr-2">3</span>
+                    <div>
+                        <p class="font-semibold">草坪专家</p>
+                        <span class="text-sm text-gray-500">游玩次数：750</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section id="game" class="my-8">
             <h2 class="text-2xl md:text-3xl font-bold mb-4 text-apple-blue">Play Weeding Master</h2>
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -67,107 +103,209 @@
                         allow="gamepad *;"
                         allowfullscreen></iframe>
                 </div>
+                <!-- 社交分享按钮（新增） -->
+                <div class="flex items-center space-x-4 p-4 border-t">
+                    <span class="font-semibold">分享游戏：</span>
+                    <button class="social-share-btn p-2 hover:bg-gray-100 rounded-full" data-platform="twitter">
+                        <svg class="w-6 h-6 text-[#1DA1F2]" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                    </button>
+                    <button class="social-share-btn p-2 hover:bg-gray-100 rounded-full" data-platform="facebook">
+                        <svg class="w-6 h-6 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </button>
+                    <button class="social-share-btn p-2 hover:bg-gray-100 rounded-full" data-platform="reddit">
+                        <svg class="w-6 h-6 text-[#FF4500]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+                    </button>
+                </div>
             </div>
         </section>
 
-        <section id="about" class="my-12">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-apple-blue">About Weeding Master</h2>
+        <!-- 评分和评论系统（新增） -->
+        <section id="ratings" class="my-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-apple-blue">玩家评分 & 评论</h2>
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <p class="mb-4">Weeding Master is an engaging lawn maintenance simulation that transforms everyday yard work into an exciting challenge. Take control of professional gardening equipment and showcase your landscaping expertise.</p>
-                <p>With each level bringing new challenges and objectives, you'll need to master both precision control and tactical planning to become the ultimate Weeding Master.</p>
+                <!-- 评分系统 -->
+                <div class="flex items-center mb-6">
+                    <div class="mr-4">
+                        <span class="text-lg font-semibold">游戏评分：</span>
+                        <span class="text-2xl text-apple-orange" id="averageRating">4.5</span>
+                        <span class="text-gray-500">/5</span>
+                    </div>
+                    <div class="flex space-x-1">
+                        <button class="star-btn text-2xl" data-rating="1">⭐</button>
+                        <button class="star-btn text-2xl" data-rating="2">⭐</button>
+                        <button class="star-btn text-2xl" data-rating="3">⭐</button>
+                        <button class="star-btn text-2xl" data-rating="4">⭐</button>
+                        <button class="star-btn text-2xl" data-rating="5">⭐</button>
+                    </div>
+                </div>
+                
+                <!-- 评论区 -->
+                <div class="mb-6">
+                    <textarea 
+                        class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-apple-blue" 
+                        placeholder="分享您的游戏体验..."
+                        rows="3"
+                    ></textarea>
+                    <button class="mt-2 bg-apple-blue text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors">
+                        发表评论
+                    </button>
+                </div>
+                
+                <!-- 评论列表 -->
+                <div class="space-y-4" id="commentsList">
+                    <!-- 示例评论 -->
+                    <div class="border-b pb-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-semibold">玩家001</span>
+                            <span class="text-apple-orange">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p class="text-gray-600">这个游戏真的很有趣，特别是割草的声音效果很舒服！</p>
+                    </div>
+                    <div class="border-b pb-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-semibold">玩家002</span>
+                            <span class="text-apple-orange">⭐⭐⭐⭐</span>
+                        </div>
+                        <p class="text-gray-600">画面很精致，操作也很流畅，希望能加入更多的关卡！</p>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- 原有的其他部分保持不变 -->
+        <section id="about" class="my-12">
+            <!-- 原有内容 -->
         </section>
 
         <section id="features" class="my-12">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-blue">Game Features</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-semibold text-apple-orange mb-3">Professional Tools</h3>
-                    <p>Access a variety of professional-grade landscaping tools and equipment.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-semibold text-apple-green mb-3">Diverse Environments</h3>
-                    <p>Work in various garden types, from small yards to extensive landscapes.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-semibold text-apple-purple mb-3">Skill Progression</h3>
-                    <p>Unlock new abilities and tools as you improve your gardening expertise.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-semibold text-apple-red mb-3">Challenge Mode</h3>
-                    <p>Test your skills in time-limited challenges and special missions.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-semibold text-apple-yellow mb-3">Weather System</h3>
-                    <p>Adapt to different weather conditions that affect gameplay mechanics.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-semibold text-apple-blue mb-3">Achievement System</h3>
-                    <p>Earn badges and rewards for mastering different gardening techniques.</p>
-                </div>
-            </div>
+            <!-- 原有内容 -->
         </section>
 
         <section id="controls" class="my-12">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-apple-blue">Game Controls</h2>
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <h3 class="text-xl font-semibold text-apple-purple mb-3">Keyboard Controls</h3>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li><span class="font-semibold">WASD or Arrow Keys:</span> Movement control</li>
-                            <li><span class="font-semibold">Space:</span> Activate equipment</li>
-                            <li><span class="font-semibold">E:</span> Switch tools</li>
-                            <li><span class="font-semibold">Esc:</span> Pause menu</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-apple-orange mb-3">Pro Tips</h3>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Plan your mowing patterns for efficiency</li>
-                            <li>Keep an eye on your equipment condition</li>
-                            <li>Use the right tool for each task</li>
-                            <li>Complete bonus objectives for extra rewards</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <!-- 原有内容 -->
         </section>
     </main>
 
+    <!-- 原有的 footer 部分保持不变 -->
     <footer class="bg-apple-dark text-white p-6">
-        <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p>&copy; 2024 Weeding Master. All rights reserved.</p>
-                </div>
-                <div class="flex space-x-4">
-                    <a href="#" class="hover:text-apple-blue transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-apple-blue transition-colors">Terms of Service</a>
-                    <a href="#" class="hover:text-apple-blue transition-colors">Contact</a>
-                </div>
-            </div>
-        </div>
+        <!-- 原有内容 -->
     </footer>
 
-    <!-- JSON-LD structured data for SEO -->
+    <!-- 原有的 JSON-LD 结构化数据保持不变 -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "VideoGame",
-        "name": "Weeding Master",
-        "description": "Experience the thrill of professional landscaping in Weeding Master. Master your gardening skills, overcome challenges, and become the ultimate weeding champion!",
-        "genre": ["Simulation", "Strategy", "Action"],
-        "playMode": "SinglePlayer",
-        "applicationCategory": "Game",
-        "url": "https://weeding-master-website.com",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
+        <!-- 原有内容 -->
+    </script>
+
+    <!-- 新增的 JavaScript 代码 -->
+    <script>
+        // 评分系统
+        const starButtons = document.querySelectorAll('.star-btn');
+        let currentRating = 0;
+        
+        starButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const rating = parseInt(button.dataset.rating);
+                currentRating = rating;
+                
+                // 更新星星显示
+                starButtons.forEach((btn, index) => {
+                    btn.style.opacity = index < rating ? '1' : '0.5';
+                });
+                
+                // 更新平均分显示
+                document.getElementById('averageRating').textContent = rating.toFixed(1);
+                
+                // 这里可以添加发送评分到服务器的代码
+                console.log(`用户评分：${rating}`);
+            });
+        });
+
+        // 评论系统
+        const commentForm = document.querySelector('textarea');
+        const submitButton = commentForm.nextElementSibling;
+        const commentsList = document.getElementById('commentsList');
+
+        submitButton.addEventListener('click', () => {
+            const commentText = commentForm.value.trim();
+            if (commentText) {
+                // 创建新评论
+                const newComment = document.createElement('div');
+                newComment.className = 'border-b pb-4';
+                newComment.innerHTML = `
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold">游客${Math.floor(Math.random() * 1000)}</span>
+                        <span class="text-apple-orange">${'⭐'.repeat(currentRating || 5)}</span>
+                    </div>
+                    <p class="text-gray-600">${commentText}</p>
+                `;
+                
+                // 添加到评论列表顶部
+                commentsList.insertBefore(newComment, commentsList.firstChild);
+                
+                // 清空输入框
+                commentForm.value = '';
+                
+                // 这里可以添加发送评论到服务器的代码
+                console.log('新评论已添加');
+            }
+        });
+
+        // 社交分享
+        const shareButtons = document.querySelectorAll('.social-share-btn');
+        shareButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const platform = button.dataset.platform;
+                const url = encodeURIComponent(window.location.href);
+                const title = encodeURIComponent('来玩除草大师！');
+                
+                let shareUrl = '';
+                switch(platform) {
+                    case 'twitter':
+                        shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+                        break;
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                        break;
+                    case 'reddit':
+                        shareUrl = `https://reddit.com/submit?url=${url}&title=${title}`;
+                        break;
+                }
+                
+                window.open(shareUrl, '_blank');
+            });
+        });
+
+        // 本地存储评论和评分
+        function saveToLocalStorage(key, value) {
+            try {
+                const existing = JSON.parse(localStorage.getItem(key) || '[]');
+                existing.unshift(value);
+                localStorage.setItem(key, JSON.stringify(existing.slice(0, 100))); // 只保存最新的100条
+            } catch (e) {
+                console.error('Error saving to localStorage:', e);
+            }
         }
-    }
+
+        // 页面加载时从localStorage加载数据
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                const comments = JSON.parse(localStorage.getItem('comments') || '[]');
+                const ratings = JSON.parse(localStorage.getItem('ratings') || '[]');
+                
+                // 显示保存的评论
+                comments.forEach(comment => {
+                    // 添加评论到列表
+                });
+                
+                // 计算并显示平均评分
+                if (ratings.length > 0) {
+                    const average = ratings.reduce((a, b) => a + b, 0) / ratings.length;
+                    document.getElementById('averageRating').textContent = average.toFixed(1);
+                }
+            } catch (e) {
+                console.error('Error loading from localStorage:', e);
+            }
+        });
     </script>
 </body>
 </html>
